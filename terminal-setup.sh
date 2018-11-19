@@ -24,6 +24,7 @@ echo "Getting .rc files.."
 
 cd ~
 curl --silent -O https://raw.githubusercontent.com/jkytomak/dotfiles/master/.bash_profile
+curl --silent -O https://raw.githubusercontent.com/jkytomak/dotfiles/master/.vimrc
 curl --silent -O https://raw.githubusercontent.com/jkytomak/dotfiles/master/.gitignore
 curl --silent -O https://raw.githubusercontent.com/jkytomak/dotfiles/master/.gitconfig
 
