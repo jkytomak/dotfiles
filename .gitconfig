@@ -1,49 +1,45 @@
 [core]
-	autocrlf = input
-	quotepath = false
-	excludesfile = ~/.gitignore
-	editor = code --wait
-	preloadindex = true
-	precomposeunicode = true
+	editor = vim
+	autocrlf = false
+  excludesfile = ~/.gitignore
 [user]
-	name = Joni Kanerva
-	email = jhonny@jhonny.org
-	signingkey = 0E51DDBF00087D5509E59CEDCF7250EFB1D491E9
-[merge]
-	tool = Kaleidoscope
-[diff]
-	tool = Kaleidoscope
-[mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-  trustexitcode = true
-[difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[github]
-	user = jonikanerva
-[color]
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
-	ui = auto
-[alias]
-	s = status
-	b = branch
-	f = fetch
-	d = difftool
-	co = checkout
-	l = log --name-status
-	pb = remote prune origin
-	nm = branch -r --no-merged
-	mm = branch -r --merged
-[difftool]
-	prompt = false
-[push]
-	default = simple
-[mergetool]
-	keepBackup = false
-	prompt = false
+	name = Jyri Kytömäki
+	email = jyri.kytomaki@reaktor.com
 [credential]
-	helper = osxkeychain
-[commit]
-	gpgsign = true
+  helper = osxkeychain
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+[alias]
+	st = status
+	d = diff
+	com = commit -v
+	co = checkout
+	cp = cherry-pick
+	diffc = diff --cached
+	l = log
+	ll = log -p
+	b = branch
+	br = branch
+	info = !"git config --list | grep ^remote.origin.url |  cut -d = -f 2"
+[rerere]
+	enabled = true
+[format]
+	numbered = auto
+[push]
+	default = current
+[branch]
+	autosetuprebase = always
+[branch "master"]
+	rebase = true
+	mergeoptions = --no-commit --no-ff
+[branch "devel"]
+	rebase = true
+[branch "develop"]
+	rebase = true
+[fetch]
+	prune = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
