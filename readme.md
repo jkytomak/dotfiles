@@ -7,7 +7,7 @@
 ## Homebrew
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew doctor
-    brew install git nvm node bash-completion postgresql macvim ssh-copy-id python go tig awscli kubernetes-cli terraform
+    brew install git nvm node bash-completion postgresql ssh-copy-id python go tig awscli kubernetes-cli terraform
     brew tap homebrew/services
     brew services start postgresql
 
