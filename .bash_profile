@@ -7,7 +7,7 @@ export PATH=".:/usr/local/sbin:$PATH:$HOME/.cabal/bin"
 
 alias ll="ls -al"
 alias ltr="ls -ltr"
-alias vi=edit
+alias vi="atom"
 
 sleep-log() {
   [[ -z "$1" ]] &&  adjust="" || adjust="-v -$1d"
