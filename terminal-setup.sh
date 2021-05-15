@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo
 echo "Updating terminal settings"
@@ -6,7 +6,6 @@ echo
 
 # Check we have Git
 command -v git > /dev/null
-
 if [[ $? != 0 ]]; then
   echo "Install git first!"
   exit
@@ -14,19 +13,37 @@ fi
 
 # Check we have Curl
 command -v curl > /dev/null
-
 if [[ $? != 0 ]]; then
   echo "Install curl first!"
   exit
 fi
 
-echo "Getting .rc files.."
+# Fetch oh-my-zsh
+if [ ! -d ~/.oh-my-zsh ]; then
+  echo "Getting oh-my-zsh.."
+  git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh --quiet
 
+  mkdir -p ~/.oh-my-zsh/custom/plugins
+  cd ~/.oh-my-zsh/custom/plugins
+  git clone git://github.com/zsh-users/zsh-syntax-highlighting.git --quiet
+fi
+
+if [ -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]; then
+  echo "Update zsh syntax highlighting.."
+  cd ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+  git pull
+fi
+
+if [ -d ~/.oh-my-zsh ]; then
+  echo "Update oh-my-zsh custom.."
+  cd ~/.oh-my-zsh/custom
+  curl --silent --show-error -O https://raw.githubusercontent.com/jkytomak/dotfiles/master/jyri.zsh-theme
+fi
+
+echo "Getting .rc files.."
 cd ~
-curl --silent -O https://raw.githubusercontent.com/jkytomak/dotfiles/master/.bash_profile
-curl --silent -O https://raw.githubusercontent.com/jkytomak/dotfiles/master/.vimrc
-curl --silent -O https://raw.githubusercontent.com/jkytomak/dotfiles/master/.gitignore
-curl --silent -O https://raw.githubusercontent.com/jkytomak/dotfiles/master/.gitconfig
+curl --silent --show-error -O https://raw.githubusercontent.com/jkytomak/dotfiles/master/.zshrc
+curl --silent --show-error -O https://raw.githubusercontent.com/jkytomak/dotfiles/master/.gitconfig
 
 echo "Done."
 echo
