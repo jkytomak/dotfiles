@@ -29,3 +29,10 @@ Install Xcode from the Mac App Store.
     brew install bash-completion postgresql
     brew tap homebrew/services
     brew services start postgresql
+
+## Firefox
+
+    about:config
+    browser.urlbar.openintab: true
+    browser.search.openintab: true
+    browser.tabs.loadBookmarksInTabs
