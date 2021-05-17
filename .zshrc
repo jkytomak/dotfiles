@@ -13,6 +13,9 @@ DISABLE_UPDATE_PROMPT=true
 plugins=(zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
+# current dir into path
+export PATH=.:$PATH
+
 # Mac
 if [[ $(uname) == 'Darwin' ]]; then
   # editor
@@ -41,6 +44,12 @@ if [[ $(uname) == 'Darwin' ]]; then
   sleep-log() {
     DAYS=${1:-"0"}
     pmset -g log | egrep 'UserIsActive|FullWake|Display is turned on|powerd process|\(coreaudiod\) Released PreventUserIdleSystemSleep' | egrep -B 1 'UserIsActive|FullWake|Display is turned on|powerd process' | grep $(date -v -${DAYS}d +"%Y-%m-%d"); date +%Y-%m-%d\ %H:%M.%S\ nyt;
+  }
+
+  setjdk() {
+    if [ $# -ne 0 ];then export JAVA_HOME=`/usr/libexec/java_home -v $@`;
+    fi;
+    java -version;
   }
 fi
 
