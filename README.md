@@ -1,7 +1,7 @@
 # Installing new machine
 
-## Xcode 
-    
+## Xcode
+
 Install Xcode from the Mac App Store.
 
     sudo xcodebuild -license

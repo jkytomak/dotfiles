@@ -10,8 +10,13 @@ ZSH_THEME="af-magic"
 DISABLE_AUTO_TITLE=true
 COMPLETION_WAITING_DOTS=true
 DISABLE_UPDATE_PROMPT=true
-plugins=(zsh-syntax-highlighting)
+plugins=(
+ zsh-syntax-highlighting
+ zsh-yarn-completions
+)
 source $ZSH/oh-my-zsh.sh
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+autoload -Uz compinit && compinit
 
 # current dir into path
 export PATH=.:$PATH

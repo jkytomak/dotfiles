@@ -38,6 +38,12 @@ if [ -d ~/.oh-my-zsh ]; then
   echo "Update oh-my-zsh custom.."
   cd ~/.oh-my-zsh/custom
   curl --silent --show-error -O https://raw.githubusercontent.com/jkytomak/dotfiles/master/jyri.zsh-theme
+  if [ -d ~/.oh-my-zsh/custom/plugins/zsh-yarn-completions ]; then
+    cd ~/.oh-my-zsh/custom/plugins/zsh-yarn-completions
+    git pull
+  else
+    git clone https://github.com/chrisands/zsh-yarn-completions ~/.oh-my-zsh/custom/plugins/zsh-yarn-completions
+  fi
 fi
 
 echo "Getting .rc files.."
