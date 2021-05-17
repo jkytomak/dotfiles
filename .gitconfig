@@ -1,45 +1,48 @@
 [core]
-	editor = vim
-	autocrlf = false
-  excludesfile = ~/.gitignore
+    editor = vim
+    autocrlf = false
+    excludesfile = ~/.gitignore
 [user]
-	name = Jyri Kytömäki
-	email = jyri.kytomaki@reaktor.com
+    name = Jyri Kytömäki
+    email = jyri.kytomaki@reaktor.com
 [credential]
-  helper = osxkeychain
+    helper = osxkeychain
 [color]
-	status = auto
-	diff = auto
-	branch = auto
-	interactive = auto
+    status = auto
+    diff = auto
+    branch = auto
+    interactive = auto
 [alias]
-	st = status
-	d = diff
-	com = commit -v
-	co = checkout
-	cp = cherry-pick
-	diffc = diff --cached
-	l = log
-	ll = log -p
-	b = branch
-	br = branch
-	info = !"git config --list | grep ^remote.origin.url |  cut -d = -f 2"
+    st = status
+    d = diff
+    com = commit -v
+    co = checkout
+    cp = cherry-pick
+    diffc = diff --cached
+    l = log
+    ll = log -p
+    b = branch
+    br = branch
+    info = !"git config --list | grep ^remote.origin.url |  cut -d = -f 2"
+    fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
 [rerere]
-	enabled = true
+    enabled = true
 [format]
-	numbered = auto
+    numbered = auto
 [push]
-	default = current
+    default = current
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
 [branch "master"]
-	rebase = true
-	mergeoptions = --no-commit --no-ff
+    rebase = true
+    mergeoptions = --no-commit --no-ff
 [branch "devel"]
-	rebase = true
+    rebase = true
 [branch "develop"]
-	rebase = true
+    rebase = true
 [fetch]
-	prune = true
+    prune = true
+[rebase]
+    autosquash = true
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+    insteadOf = https://github.com/
