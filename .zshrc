@@ -44,7 +44,7 @@ if [[ $(uname) == 'Darwin' ]]; then
   export PATH=$PATH:$(yarn global bin)
 
   # for docker
-  alias docker-remove-all='docker stop $(docker ps -q); docker rm $(docker ps -a -q); docker rmi -f $(docker images -q)'
+  alias docker-prune='docker image prune -a'
 
   sleep-log() {
     DAYS=${1:-"0"}
