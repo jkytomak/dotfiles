@@ -35,4 +35,5 @@ Install Xcode from the Mac App Store.
     about:config
     browser.urlbar.openintab: true
     browser.search.openintab: true
-    browser.tabs.loadBookmarksInTabs
+    browser.tabs.loadBookmarksInTabs: true
+    browser.link.open_newwindow.restriction: 0
