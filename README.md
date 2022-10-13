@@ -37,3 +37,5 @@ Install Xcode from the Mac App Store.
     browser.search.openintab: true
     browser.tabs.loadBookmarksInTabs: true
     browser.link.open_newwindow.restriction: 0
+    browser.gesture.swipe.left: ''
+    browser.gesture.swipe.right: ''
