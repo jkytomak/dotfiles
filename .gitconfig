@@ -2,9 +2,10 @@
     editor = vim
     autocrlf = false
     excludesfile = ~/.gitignore
+    pager = less -iXFR
 [user]
     name = Jyri Kytömäki
-    email = jyri.kytomaki@reaktor.com
+    email = jyri@kytomaki.fi
 [credential]
     helper = osxkeychain
 [color]
