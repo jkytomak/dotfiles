@@ -32,6 +32,7 @@
     numbered = auto
 [push]
     default = current
+    autoSetupRemote = true
 [branch]
     autosetuprebase = always
 [branch "master"]
