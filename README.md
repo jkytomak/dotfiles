@@ -12,8 +12,9 @@ Install Xcode from the Mac App Store.
     brew doctor
     brew install git tig
 
-### Keep uptodate by adding to profile
+### Keep uptodate by adding to profile and do it only once per 16h
 
+    export HOMEBREW_AUTO_UPDATE_SECS=57600
     brew outdated
 
 ## Terminal Settings
