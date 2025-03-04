@@ -12,6 +12,10 @@ Install Xcode from the Mac App Store.
     brew doctor
     brew install git tig
 
+### Keep uptodate by adding to profile
+
+    brew outdated
+
 ## Terminal Settings
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/jkytomak/dotfiles/master/terminal-setup.sh)"
