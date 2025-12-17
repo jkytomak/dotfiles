@@ -23,11 +23,15 @@ Install Xcode from the Mac App Store.
 
 ## Nvm + npms
 
-    brew install nvm node yarn
+    brew install nvm node
     nvm ls-remote --lts | tail -5
     nvm install --lts
     nvm use --lts
     nvm alias default "lts/*"
+
+### pnpm code completion:
+
+https://github.com/g-plane/pnpm-shell-completion?tab=readme-ov-file#oh-my-zsh
 
 ## Postgresql
 

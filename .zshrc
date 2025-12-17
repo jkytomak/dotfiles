@@ -12,11 +12,10 @@ COMPLETION_WAITING_DOTS=true
 DISABLE_UPDATE_PROMPT=true
 plugins=(
  zsh-syntax-highlighting
- zsh-yarn-completions
+ pnpm-shell-completion
 )
 source $ZSH/oh-my-zsh.sh
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
-autoload -Uz compinit && compinit
 
 # current dir into path
 export PATH=.:$PATH
@@ -40,8 +39,7 @@ if [[ $(uname) == 'Darwin' ]]; then
   . "/opt/homebrew/opt/nvm/nvm.sh"
   alias n='npm run-script'
 
-  # for yarn
-  export PATH=$PATH:$(yarn global bin)
+  alias p="pnpm"
 
   # for docker
   alias docker-prune='docker image prune -a'
