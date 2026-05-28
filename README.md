@@ -48,3 +48,11 @@ https://github.com/g-plane/pnpm-shell-completion?tab=readme-ov-file#oh-my-zsh
     browser.link.open_newwindow.restriction: 0
     browser.gesture.swipe.left: ''
     browser.gesture.swipe.right: ''
+
+## CotEditor
+
+Install CotEditor from the Mac App Store.
+
+Install command line tool:
+
+    sudo ln -s /Applications/CotEditor.app/Contents/SharedSupport/bin/cot /usr/local/bin/cot
