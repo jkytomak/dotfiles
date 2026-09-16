@@ -23,8 +23,8 @@ export PATH=.:$PATH
 # Mac
 if [[ $(uname) == 'Darwin' ]]; then
   # editor
-  export EDITOR=cot
-  alias vi=$EDITOR
+  export EDITOR="cot -w"
+  alias vi=cot
 
   # for homebrew
   export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH

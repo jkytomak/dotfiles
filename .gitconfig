@@ -1,5 +1,5 @@
 [core]
-    editor = vim
+    editor = cot -w
     autocrlf = false
     excludesfile = ~/.gitignore
     pager = less -iXFR
