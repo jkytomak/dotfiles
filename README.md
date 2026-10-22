@@ -33,12 +33,6 @@ Install Xcode from the Mac App Store.
 
 https://github.com/g-plane/pnpm-shell-completion?tab=readme-ov-file#oh-my-zsh
 
-## Postgresql
-
-    brew install bash-completion postgresql
-    brew tap homebrew/services
-    brew services start postgresql
-
 ## Firefox
 
     about:config
