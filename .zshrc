@@ -29,6 +29,7 @@ if [[ $(uname) == 'Darwin' ]]; then
   # for homebrew
   export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
   export HOMEBREW_INSTALL_CLEANUP=true
+  export HOMEBREW_NO_ASK=1
   alias brew-all='brew update && brew upgrade && brew cleanup; brew doctor'
 
   # for node modules
@@ -58,3 +59,4 @@ fi
 
 alias ll="ls -al"
 alias ltr="ls -ltr"
+export PATH="$HOME/.local/bin:$PATH"
