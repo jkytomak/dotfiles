@@ -59,4 +59,6 @@ fi
 
 alias ll="ls -al"
 alias ltr="ls -ltr"
+alias claude-high="claude --effort high"
+alias claude-xhigh="claude --effort xhigh"
 export PATH="$HOME/.local/bin:$PATH"
